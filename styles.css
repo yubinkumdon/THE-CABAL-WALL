@@ -1,0 +1,61 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+/* Header styling */
+header {
+  position: fixed;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.graffiti-text {
+  font-family: 'Graffiti', sans-serif;
+  font-size: 4rem;
+  color: #000;
+}
+
+/* Fly styling */
+.fly {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('fly.png'); /* Using custom fly image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: randomFlyAnimation 10s infinite;
+}
+
+@keyframes randomFlyAnimation {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(100px, -150px) rotate(45deg);
+  }
+  50% {
+    transform: translate(-200px, 200px) rotate(90deg);
+  }
+  75% {
+    transform: translate(150px, -100px) rotate(135deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(360deg);
+  }
+}
